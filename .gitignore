@@ -1,0 +1,55 @@
+# ==========================================
+# ElectraLab - Version Control Ignore Rules
+# ==========================================
+
+# --- Environment & Secret Management ---
+.env
+.env.local
+.env.*.local
+application-secrets.properties
+application-local.properties
+*.pem
+*.key
+*.jks
+
+# --- Backend (Java / Maven / Spring Boot) ---
+backend/target/
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+.mvn/wrapper/maven-wrapper.jar
+
+# --- Frontend (Node / React / Vite) ---
+frontend/node_modules/
+**/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+**/dist/
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- IDEs & Editors ---
+.idea/
+*.iml
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Operating System Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
