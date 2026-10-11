@@ -1,0 +1,32 @@
+# ===================================================================
+# ElectraLab - Local Database Configuration Template
+# ===================================================================
+# Copy this file to 'backend/src/main/resources/application-local.properties'
+# to configure your local Aiven MySQL connection.
+#
+# NOTE: 'application-local.properties' is already ignored by Git (.gitignore).
+# Never commit real credentials to version control.
+# ===================================================================
+
+# Aiven MySQL JDBC URL (SSL is required by Aiven)
+# Format: jdbc:mysql://<AIVEN_HOST>:<AIVEN_PORT>/<DATABASE_NAME>?sslMode=REQUIRED
+spring.datasource.url=jdbc:mysql://<AIVEN_HOST>:<AIVEN_PORT>/<DATABASE_NAME>?sslMode=REQUIRED
+
+# Database Username (default in Aiven is typically 'avnadmin')
+spring.datasource.username=<AIVEN_USERNAME>
+
+# Database Password (set your actual Aiven password here)
+spring.datasource.password=<AIVEN_PASSWORD>
+
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# JPA / Hibernate Settings
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.open-in-view=false
+
+# HikariCP Pool (Conservative sizing for cloud limits)
+spring.datasource.hikari.maximum-pool-size=5
+spring.datasource.hikari.minimum-idle=2
+spring.datasource.hikari.connection-timeout=30000
